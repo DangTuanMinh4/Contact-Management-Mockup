@@ -1,0 +1,40 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp",
+      "enabled": true
+    },
+    "rulesync": {
+      "type": "local",
+      "command": [
+        "pnpm",
+        "dlx",
+        "rulesync",
+        "mcp"
+      ],
+      "enabled": true,
+      "environment": {}
+    }
+  },
+  "permission": {
+    "bash": {
+      "git status": "allow",
+      "git diff": "allow",
+      "ls *": "allow",
+      "rm -rf *": "deny",
+      "*": "ask"
+    },
+    "edit": {
+      "src/**": "allow"
+    },
+    "read": {
+      ".env": "deny",
+      "credentials/**": "deny"
+    }
+  },
+  "instructions": [
+    "AGENTS.md",
+  ]
+}

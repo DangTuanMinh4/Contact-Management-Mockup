@@ -1,0 +1,87 @@
+/* src/pages/ContactManagerPage.css
+ * Page-specific styles only.
+ * Global theme variables live in src/index.css (single source of truth).
+ */
+
+/* Page container */
+.contact-manager-page {
+  padding: 1.5rem 0;
+}
+
+/* Page header */
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Toolbar */
+.toolbar {
+  background-color: var(--bg-elev);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+/* Table enhancements */
+.table thead th {
+  background-color: var(--bg-elev-2);
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.table tbody td {
+  vertical-align: middle;
+}
+
+/* Status badge subtles aligned with UI/UX rules */
+.badge.bg-info-subtle {
+  background-color: var(--badge-active-bg) !important;
+  color: var(--badge-active-text) !important;
+}
+
+.badge.bg-secondary-subtle {
+  background-color: var(--badge-inactive-bg) !important;
+  color: var(--badge-inactive-text) !important;
+}
+
+.badge.bg-warning-subtle {
+  background-color: var(--badge-frequent-bg) !important;
+  color: var(--badge-frequent-text) !important;
+}
+
+.badge.bg-success-subtle {
+  background-color: var(--badge-new-bg) !important;
+  color: var(--badge-new-text) !important;
+}
+
+/* Empty state card */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+/* Loading spinner */
+.loading-state {
+  padding: 3rem;
+  text-align: center;
+}

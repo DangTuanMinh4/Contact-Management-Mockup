@@ -1,0 +1,106 @@
+/* src/index.css - Global Design System (Light Theme)
+ * Aligned with .rulesync/rules/ui-ux-rules.md
+ * Single source of truth for theming variables and base element styles.
+ */
+
+:root {
+  /* Theme: Light */
+  --bg: #f8f9fa;
+  --bg-elev: #ffffff;
+  --bg-elev-2: #f3f4f6;
+  --card: #ffffff;
+  --card-border: #e5e7eb;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+
+  /* Primary Brand Color: Vibrant Indigo/Purple */
+  --primary: #6a5acd;
+  --primary-600: #5c4eba;
+  --primary-700: #4338ca;
+
+  /* Secondary / Accent */
+  --accent: #8b5cf6;
+  --accent-soft: #ede9fe;
+
+  /* Status colors */
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --info: #0ea5e9;
+
+  /* Badge subtles */
+  --badge-active-bg: #e0f2fe;
+  --badge-active-text: #0369a1;
+  --badge-inactive-bg: #f3f4f6;
+  --badge-inactive-text: #6b7280;
+  --badge-frequent-bg: #fef3c7;
+  --badge-frequent-text: #b45309;
+  --badge-new-bg: #dcfce7;
+  --badge-new-text: #166534;
+
+  /* Layout */
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+  --space-1: 6px;
+}
+
+/* Base element resets */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+/* Ensure Bootstrap cards/controls use theme colors */
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+}
+
+.form-control {
+  background-color: var(--bg-elev);
+  color: var(--text);
+  border: 1px solid var(--card-border);
+}
+
+.form-control:focus {
+  background-color: var(--bg-elev);
+  color: var(--text);
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 0.2rem rgba(92, 78, 186, 0.25);
+}
+
+/* Primary button: indigo gradient */
+.btn-primary {
+  background-image: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+  color: #fff;
+}
+
+/* Pagination */
+.page-link {
+  background-color: var(--bg-elev);
+  color: var(--text);
+  border: 1px solid var(--card-border);
+}
+
+.page-link:hover {
+  background-color: var(--bg-elev-2);
+  color: var(--text);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary-600);
+  border-color: var(--primary-600);
+  color: #fff;
+}
